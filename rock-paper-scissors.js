@@ -2,30 +2,50 @@ const rock = 0;
 const paper = 1;
 const scissors = 2;
 
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice() {
   let computerChoice = Math.floor(Math.random() * 3);
 
-  if (computerChoice === 0) {
+  if ((computerChoice = 0)) {
     return "Rock";
-  } else if (computerChoice === 1) {
+  } else if ((computerChoice = 1)) {
     return "Paper";
-  } else if (computerChoice === 2) {
+  } else if ((computerChoice = 2)) {
     return "Scissors";
-  } else "error";
+  }
 
   return computerChoice;
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice()); //
 
 function getHumanChoice() {
   let humanChoice = prompt(
     "Hi user, Whats your choice, Rock, Paper or Scissor"
   );
-  return console.log("you selected", humanChoice);
+
+  humanChoice = humanChoice.toLowerCase();
+  console.log("you typed", humanChoice);
+
+  if (humanChoice === "rock") {
+    humanChoice = rock;
+  } else if (humanChoice === "paper") {
+    humanChoice = paper;
+  } else if (humanChoice === "scissors") {
+    humanChoice = scissors;
+  } else {
+    return console.log("error");
+  }
+
+  return humanChoice;
 }
 
-getHumanChoice();
+// getHumanChoice(); //
+
+let humanScore;
+let computerScore;
+
+function playRound(humanChoice, computerChoice) {
+  humanChoice;
+  computerChoice;
+  return playRound();
+}
