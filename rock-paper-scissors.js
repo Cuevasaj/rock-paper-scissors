@@ -64,7 +64,7 @@ const playGame = () => {
       console.log(
         `
         Score: Human: ${humanScore} Computer: ${computerScore}
-        You lose, Computer choice: ${computerChoice} beats your Human: ${humanChoice} choice.
+        You lose, Computer choice: ${computerChoice} beats your Human: ${humanChoice}.
         `
       );
     }
@@ -85,7 +85,7 @@ const playGame = () => {
     );
   } else if (computerScore > humanScore) {
     console.log(
-      `Computer Wins!- Score: Human: ${humanScore} Computer: ${computerScore}`
+      `Computer Wins! - Score: Human: ${humanScore} Computer: ${computerScore}`
     );
   } else {
     console.log(
