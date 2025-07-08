@@ -3,22 +3,19 @@ const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
 
+const computerChoiceMap = {
+  // key -> value
+  [0]: rock,
+  [1]: paper,
+  [2]: scissors,
+};
+
 function getComputerChoice() {
-  let computerChoice = Math.floor(Math.random() * 3);
-
-  if (computerChoice === 0) {
-    return "rock";
-  } else if (computerChoice === 1) {
-    return "paper";
-  } else if (computerChoice === 2) {
-    return "scissors";
-  }
-  // Happening in the scope of the function
-  return computerChoice; // will return a string
+  const computerChoice = Math.floor(Math.random() * 3);
+  const value = computerChoiceMap[computerChoice];
+  return value;
 }
-
-// console.log("this is the computer choice:", getComputerChoice());
-
+//
 function getHumanChoice() {
   let humanChoice = prompt(
     "Hi user, Whats your choice, Rock, Paper or Scissors"
