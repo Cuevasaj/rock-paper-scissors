@@ -17,24 +17,20 @@ function getComputerChoice() {
 }
 //
 function getHumanChoice() {
-  let humanChoice = prompt(
+  const humanChoice = prompt(
     "Hi user, Whats your choice, Rock, Paper or Scissors"
   );
 
-  humanChoice = humanChoice.toLowerCase();
-  // console.log("you typed", humanChoice); // verification
+  const sanitized = humanChoice.toLowerCase();
+  const isValid = [rock, paper, scissors].includes(sanitized); // Array
 
-  if (humanChoice === "rock") {
-    humanChoice = rock;
-  } else if (humanChoice === "paper") {
-    humanChoice = paper;
-  } else if (humanChoice === "scissors") {
-    humanChoice = scissors;
-  } else {
-    return console.log("error");
+  if (isValid) {
+    return sanitized;
   }
 
-  return humanChoice; //  Will return a string
+  alert("Invalid input enter, Rock, Paper or Scissor");
+
+  return getHumanChoice();
 }
 
 // console.log(playRound(getHumanChoice(), getComputerChoice()));
