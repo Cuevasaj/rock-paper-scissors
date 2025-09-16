@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
   </head>
 
   <body>
-    <!-- Your game elements can go here -->
-    <input type="number" id="queen" />
-    <button id="king">Run</button>
+    <h1 class="game-title">Rock Paper Scissors</h1>
 
-    <!-- JavaScript file loaded at the end of the body -->
+    <div class="scoreboard">
+      <div class="score-card">
+        <h2 class="player">Player🧔🏽</h2>
+        <div class="player-score">0</div>
+      </div>
+      <div class="score-card">
+        <h2 class="computer">Computer🤖</h2>
+        <div class="computer-score">0</div>
+      </div>
+    </div>
+
+    <div class="final-score">WHO WILL WIN!!!</div>
+
+    <div class="game-options">
+      <div id="rock">
+        <button class="choice-btn" data-choice="rock">🪨</button>
+      </div>
+      <div id="paper">
+        <button class="choice-btn" data-choice="paper">📄</button>
+      </div>
+      <div id="scissors">
+        <button class="choice-btn" data-choice="scissors">✂️</button>
+      </div>
+    </div>
+
     <script src="rock-paper-scissors.js"></script>
   </body>
 </html>
